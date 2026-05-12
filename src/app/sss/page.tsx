@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Sıkça Sorulan Sorular · Elektrostatik Toz Boya",
   description:
-    "Elektrostatik toz boya, fırın boya, kumlama, teslim süresi, garanti ve sipariş süreçleri ile ilgili en sık sorulan soruların cevapları.",
+    "Elektrostatik toz boya, fırın boya, vernik kaplama, teslim süresi, garanti ve sipariş süreçleri ile ilgili en sık sorulan soruların cevapları.",
   alternates: { canonical: "/sss" },
 };
 

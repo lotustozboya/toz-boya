@@ -13,8 +13,8 @@ export const faqs: FaqItem[] = [
     a: "Hayır, küçük partiler dahil tüm projelerinizi değerlendiriyoruz. Tek parça veya küçük seri üretimler için aynı kalite standardını uyguluyoruz.",
   },
   {
-    q: "RAL kataloğu dışındaki özel renklerde üretim yapılıyor mu?",
-    a: "Evet. RAL renk kataloğunun yanı sıra Pantone, NCS ve numune üzerinden özel renk kodu üretimi yapabiliyoruz. Numuneye göre 3–7 iş günü içinde özel renk hazırlanır.",
+    q: "Hangi renk kataloglarına göre boya yapıyorsunuz?",
+    a: "RAL kataloğundaki tüm renkleri ve Jotun renk kodlarını destekliyoruz. Numune üzerinden özel renk eşleştirme de mümkündür; bu durumda 3–7 iş günü içinde hazırlanır.",
   },
   {
     q: "Teslim süresi ne kadardır?",
@@ -22,7 +22,7 @@ export const faqs: FaqItem[] = [
   },
   {
     q: "Boyanan parçalar için garanti veriyor musunuz?",
-    a: "Yüzey hazırlığı bizim sorumluluğumuzda yapılan tüm projelerde aderans, kalınlık ve renk dayanımı için yazılı garanti sunuyoruz. Antikorozif sistemlerimizde ISO 12944 standardında performans taahhüdü mevcuttur.",
+    a: "Yüzey hazırlığı bizim sorumluluğumuzda yapılan tüm projelerde aderans, kalınlık ve renk dayanımı için yazılı garanti sunuyoruz. Her teslimde mikron ve aderans ölçüm raporu paylaşılır.",
   },
   {
     q: "Çorlu dışındaki firmalara hizmet veriyor musunuz?",
@@ -30,10 +30,14 @@ export const faqs: FaqItem[] = [
   },
   {
     q: "Hangi metal yüzeylere uygulama yapabilirsiniz?",
-    a: "Karbon çelik, dökme demir, alüminyum, galvaniz ve paslanmaz çelik yüzeylere uygun reçete ile elektrostatik toz boya ve fırın boya uygulayabiliyoruz.",
+    a: "Karbon çelik, dökme demir, alüminyum, galvaniz ve paslanmaz çelik yüzeylere uygun reçete ile elektrostatik toz boya, fırın boya ve vernik kaplama uygulayabiliyoruz.",
+  },
+  {
+    q: "Vernik kaplama hangi durumlarda öneriliyor?",
+    a: "Boyalı veya doğal metal yüzeylerde renk derinliğini güçlendirmek, çizilme ve UV dayanımını artırmak istediğinizde vernik kaplama öneriyoruz. Mat, yarı mat ve parlak seçenekleriyle estetik ön plana çıkan parçalar için idealdir.",
   },
   {
     q: "Maksimum boyutlarda kaç metrelik parça boyayabiliyorsunuz?",
-    a: "Konveyörlü pişirme fırınımız tek parça 6 metre uzunluk, 2.2 metre yükseklik kapasitesindedir. Daha büyük gabarili işler için saha çözümleri konuşulabilir.",
+    a: "Pişirme fırınımız 6 m uzunluk, 1.9 m genişlik ve 2 m yükseklik kapasitesindedir. Bu boyutlara sığan tek parça konstrüksiyon, makine kabini ve büyük ebatlı parçaları sorunsuz işliyoruz.",
   },
 ];

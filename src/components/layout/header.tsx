@@ -36,10 +36,8 @@ export function Header() {
   return (
     <header
       className={cn(
-        "sticky top-0 z-50 w-full transition-colors duration-200",
-        scrolled
-          ? "bg-[var(--color-bg)]/92 backdrop-blur-md border-b border-[var(--color-line)]"
-          : "bg-transparent border-b border-transparent",
+        "section-tint-raised sticky top-0 z-50 w-full border-b border-[var(--color-line-strong)] transition-shadow duration-200",
+        scrolled && "shadow-[0_1px_0_0_var(--color-line)]",
       )}
     >
       <Container className="flex h-16 md:h-[72px] items-center justify-between">

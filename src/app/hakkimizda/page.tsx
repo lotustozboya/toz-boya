@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/sections/page-hero";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { Stats } from "@/components/sections/stats";
 import { CtaBanner } from "@/components/sections/cta-banner";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
+import { Container } from "@/components/ui/container";
 import { JsonLd, breadcrumbSchema } from "@/components/seo/json-ld";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Hakkımızda · 11+ Yıllık Endüstriyel Boya Tecrübesi",
   description:
-    "Lotus Elektrostatik Boya, Çorlu OSB merkezli tesisinde elektrostatik toz boya ve fırın boya çözümleri sunan, 11+ yıllık tecrübeye sahip endüstriyel kaplama firmasıdır.",
+    "Lotus Boya, Çorlu OSB merkezli tesisinde elektrostatik toz boya, fırın boya ve vernik kaplama hizmeti sunan, 11+ yıllık tecrübeye sahip endüstriyel kaplama firmasıdır.",
   alternates: { canonical: "/hakkimizda" },
 };
 
@@ -33,16 +33,21 @@ const values = [
   {
     title: "Mühendislik desteği",
     detail:
-      "Standart RAL renklerinin ötesinde, müşterinin uygulama koşuluna özel reçete önerisi geliştiriyoruz.",
+      "RAL kataloğu ve Jotun renk kodlarını destekliyor, müşterinin uygulama koşuluna özel reçete önerisi geliştiriyoruz.",
   },
 ];
 
-const milestones = [
-  { year: "2014", text: "Çorlu OSB’de tesis kuruluşu" },
-  { year: "2017", text: "5 kademeli ön işlem hattının devreye alınması" },
-  { year: "2019", text: "6m konveyörlü pişirme fırını yatırımı" },
-  { year: "2022", text: "ISO 12944 antikorozif sistem sertifikasyonu" },
-  { year: "2024", text: "Aylık kapasite 25.000 m²’ye ulaştı" },
+const facts = [
+  { label: "Faaliyette", value: `${site.stats.yearsActive}+ yıl` },
+  {
+    label: "Proje",
+    value: site.stats.projectsDelivered.toLocaleString("tr-TR"),
+  },
+  {
+    label: "Kurumsal müşteri",
+    value: `${site.stats.industrialClients}+`,
+  },
+  { label: "Fırın hattı", value: site.stats.ovenDimensions },
 ];
 
 export default function AboutPage() {
@@ -52,18 +57,50 @@ export default function AboutPage() {
       <PageHero
         eyebrow="Hakkımızda"
         title="Trakya’nın endüstriyel kaplama çözüm ortağı"
-        description={`${site.shortName}, 2014’ten bu yana Çorlu Organize Sanayi Bölgesi’nde elektrostatik toz boya, fırın boya ve antikorozif kaplama hizmeti sunuyor. Bölgenin önde gelen üreticileriyle uzun vadeli ortaklıklar kurduk.`}
+        description={`${site.shortName}, 2014’ten bu yana Çorlu Organize Sanayi Bölgesi’nde elektrostatik toz boya, fırın boya ve vernik kaplama hizmeti sunuyor. Bölgenin önde gelen üreticileriyle uzun vadeli ortaklıklar kurduk.`}
       />
 
-      <Stats />
+      {/* Künye — kompakt teknik şerit */}
+      <section
+        aria-label="Tesis künyesi"
+        className="section-tint-recess border-b border-[var(--color-line-strong)]"
+      >
+        <Container className="py-8 md:py-10">
+          <dl className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[var(--color-line)]">
+            {facts.map((f, i) => (
+              <div
+                key={f.label}
+                className={`flex flex-col gap-1.5 ${
+                  i === 0 ? "pr-4 md:pl-0 md:pr-6" : "px-4 md:px-6"
+                } ${i === facts.length - 1 ? "pl-4 md:pr-0" : ""} ${
+                  i >= 2 ? "pt-6 mt-6 md:mt-0 md:pt-0 border-t md:border-t-0 border-[var(--color-line)]" : ""
+                }`}
+              >
+                <dt className="font-mono text-[10px] uppercase tracking-[0.18em] text-[var(--color-text-subtle)]">
+                  {f.label}
+                </dt>
+                <dd
+                  className={`font-display font-semibold tracking-[-0.02em] text-[var(--color-text)] tabular-nums leading-none ${
+                    f.value.length > 6 ? "text-[1.05rem] md:text-[1.25rem]" : "text-[1.4rem] md:text-[1.75rem]"
+                  }`}
+                >
+                  {f.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </Container>
+      </section>
 
-      <Section size="md" className="border-t border-[var(--color-line)]">
+      {/* Değerler — endüstriyel hairline grid */}
+      <Section size="md">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-4">
             <SectionHeader
-              eyebrow="Misyon"
+              eyebrow="Çalışma Prensibi"
               title="Üreticinin yanında, kaliteli kaplamanın garantisi"
-              description="Endüstriyel üretimde kaplama, ürünün dış dünyaya açılan ilk yüzüdür. Görünüş, dayanım ve marka algısı doğrudan kaplama kalitesine bağlıdır."
+              description="Kaplama, üretilen parçanın dış dünyaya açılan ilk yüzüdür. Dayanım, görsel kalite ve teslim disipliniyle bu yüzü garanti altına alıyoruz."
+              inlineEyebrowOnMobile
             />
           </div>
           <div className="lg:col-span-8 grid border-t border-l border-[var(--color-line)] sm:grid-cols-2">
@@ -87,32 +124,10 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section size="md" className="border-t border-[var(--color-line)]">
-        <SectionHeader
-          eyebrow="Yolculuğumuz"
-          title="11 yıllık üretim hattı"
-        />
-        <ol className="mt-14 border-t border-[var(--color-line-strong)]">
-          {milestones.map((m, i) => (
-            <li
-              key={m.year}
-              className="grid grid-cols-12 gap-4 md:gap-8 items-baseline border-b border-[var(--color-line)] py-6"
-            >
-              <span className="col-span-2 md:col-span-1 font-mono text-[10px] tabular-nums tracking-[0.16em] text-[var(--color-text-subtle)]">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <span className="col-span-3 md:col-span-2 font-display tabular-nums text-xl md:text-2xl font-semibold text-[var(--color-text)] tracking-[-0.02em]">
-                {m.year}
-              </span>
-              <p className="col-span-12 md:col-span-9 col-start-3 md:col-start-auto text-base md:text-[17px] text-[var(--color-text-muted)] leading-relaxed">
-                {m.text}
-              </p>
-            </li>
-          ))}
-        </ol>
-      </Section>
-
-      <CtaBanner />
+      <CtaBanner
+        title="Tesisimizi yakından görmek ister misiniz?"
+        description="Çorlu OSB içindeki fabrikamıza ziyaret talebinizi WhatsApp veya telefon üzerinden iletebilirsiniz."
+      />
 
       <JsonLd
         data={breadcrumbSchema([

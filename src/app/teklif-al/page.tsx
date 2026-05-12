@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Teklif Al · 24 Saatte Detaylı Fiyat",
   description:
-    "Elektrostatik toz boya, fırın boya, kumlama veya antikorozif kaplama için ücretsiz teklif alın. 24 saat içinde detaylı geri dönüş.",
+    "Elektrostatik toz boya, fırın boya, vernik kaplama veya yüzey ön işleme için ücretsiz teklif alın. 24 saat içinde detaylı geri dönüş.",
   alternates: { canonical: "/teklif-al" },
 };
 

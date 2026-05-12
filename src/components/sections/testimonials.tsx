@@ -33,7 +33,7 @@ interface Item {
 
 export function Testimonials() {
   return (
-    <Section size="md" className="border-t border-[var(--color-line)]">
+    <Section size="md" className="section-tint-raised border-y border-[var(--color-line)]">
       <SectionHeader
         eyebrow="Referans Notları"
         title="Bölgenin sanayi devleri ile çalışıyoruz"

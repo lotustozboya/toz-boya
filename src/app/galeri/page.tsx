@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Galeri · Endüstriyel Kaplama Projelerimiz",
   description:
-    "Çorlu, Çerkezköy ve Tekirdağ’daki kurumsal müşterilerimiz için tamamladığımız elektrostatik toz boya, fırın boya ve antikorozif kaplama projelerinden örnekler.",
+    "Çorlu, Çerkezköy ve Tekirdağ’daki kurumsal müşterilerimiz için tamamladığımız elektrostatik toz boya, fırın boya ve vernik kaplama projelerinden örnekler.",
   alternates: { canonical: "/galeri" },
 };
 

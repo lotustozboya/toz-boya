@@ -10,7 +10,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Hizmetler · Elektrostatik Toz Boya & Endüstriyel Kaplama",
   description:
-    "Çorlu, Çerkezköy ve Tekirdağ bölgesindeki üreticilere elektrostatik toz boya, fırın boya, kumlama, antikorozif kaplama ve özel endüstriyel boya çözümleri.",
+    "Çorlu, Çerkezköy ve Tekirdağ bölgesindeki üreticilere elektrostatik toz boya, fırın boya, vernik kaplama ve yüzey ön işleme çözümleri.",
   alternates: { canonical: "/hizmetler" },
 };
 
@@ -20,8 +20,8 @@ export default function ServicesPage() {
       <Breadcrumbs items={[{ href: "/hizmetler", label: "Hizmetler" }]} />
       <PageHero
         eyebrow="Hizmetler"
-        title="Endüstriyel kaplamada tek çatı altında altı hizmet"
-        description="Yüzey hazırlığından polimerizasyona, antikorozif sistem tasarımından özel reçeteli kaplamalara kadar tüm aşamaları tek bir tesiste tamamlıyoruz."
+        title="Endüstriyel kaplamada tek çatı altında dört hizmet"
+        description="Yüzey hazırlığından polimerizasyona, vernik kaplamadan kalite kontrolüne kadar tüm aşamaları tek bir tesiste tamamlıyoruz."
       />
       <ServicesGrid />
       <Process />

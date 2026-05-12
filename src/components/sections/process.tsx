@@ -13,7 +13,7 @@ const steps = [
     code: "B",
     title: "Yüzey Hazırlık",
     detail:
-      "5 kademeli yıkama ya da kumlama ile metal yüzeyini ISO standartlarında hazırlıyoruz.",
+      "5 kademeli yıkama ve fosfatlama ile metal yüzeyini boyaya hazır hale getiriyoruz.",
     spec: "ISO Sa 2.5",
     specFull: "Standart · ISO 8501-1 Sa 2.5",
   },

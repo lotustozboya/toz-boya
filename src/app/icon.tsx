@@ -11,7 +11,7 @@ export default function Icon() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#0a0a0b",
+          background: "#f8f7f4",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -21,7 +21,7 @@ export default function Icon() {
           viewBox="0 0 200 200"
           width="26"
           height="26"
-          fill="#fafafa"
+          fill="#1a1a1a"
           fillRule="evenodd"
           xmlns="http://www.w3.org/2000/svg"
         >

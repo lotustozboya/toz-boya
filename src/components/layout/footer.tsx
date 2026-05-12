@@ -8,17 +8,17 @@ import { services } from "@/lib/data/services";
 import { cities } from "@/lib/data/cities";
 
 const certifications = [
-  "ISO 12944 · C3–C5",
-  "ISO 8501-1 · Sa 2.5",
+  "Fırın · 6 × 1.9 × 2 m",
+  "Film · 60–120 µm",
   "ISO 2360 · Mikron Ölçüm",
   "ISO 2409 · Aderans",
-  "RAL · Pantone · NCS",
+  "RAL · Jotun",
 ];
 
 export function Footer() {
   return (
     <footer
-      className="border-t border-[var(--color-line-strong)] bg-[var(--color-bg)] mt-24"
+      className="section-tint-recess border-t border-[var(--color-line-strong)] mt-24"
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only">

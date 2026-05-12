@@ -7,7 +7,7 @@ export const site = {
   shortName: "Lotus Boya",
   tagline: "Endüstriyel Elektrostatik Toz Boya Çözümleri",
   description:
-    "Çorlu, Çerkezköy ve Tekirdağ bölgesinde elektrostatik toz boya, fırın boya ve endüstriyel yüzey kaplama hizmetleri. Kurumsal kalite, hızlı teslimat ve uzun ömürlü kaplama garantisi.",
+    "Çorlu OSB merkezli tesisimizden Çerkezköy, Velimeşe, Ergene, Kapaklı, Tekirdağ, Marmara Ereğlisi ve Silivri’ye elektrostatik toz boya, fırın boya ve vernik kaplama hizmetleri. Kurumsal kalite, hızlı teslimat ve uzun ömürlü kaplama.",
   url: "https://lotuselektrostatik.com", // [TODO: domain]
   locale: "tr_TR",
   founded: "2014",
@@ -28,7 +28,7 @@ export const site = {
     city: "Tekirdağ",
     postalCode: "59860",
     country: "TR",
-    geo: { lat: 41.1597, lng: 27.8003 }, // Çorlu approx — [TODO: real coords from Google Maps]
+    geo: { lat: 41.1501036, lng: 27.7347544 }, // verified from Google Maps place ID
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Hatip+Mahallesi+Akasma+Sokak+H+Blok+No+4CA+%C3%87orlu+Tekirda%C4%9F",
   },
@@ -48,7 +48,7 @@ export const site = {
     yearsActive: 11,
     projectsDelivered: 1200,
     industrialClients: 180,
-    capacityM2PerMonth: 25000,
+    ovenDimensions: "6 × 1.9 × 2 m",
   },
 } as const;
 

@@ -7,9 +7,9 @@ import { JsonLd, breadcrumbSchema } from "@/components/seo/json-ld";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Hizmet Bölgeleri · Çorlu, Çerkezköy, Tekirdağ, Kapaklı",
+  title: "Hizmet Bölgeleri · Çorlu, Çerkezköy, Velimeşe, Ergene, Tekirdağ",
   description:
-    "Lotus Elektrostatik Boya, Çorlu OSB merkezli tesisinden Çerkezköy, Kapaklı ve Tekirdağ’ın tüm sanayi bölgelerine endüstriyel kaplama hizmeti sunar.",
+    "Lotus Boya, Çorlu OSB merkezli tesisinden Çerkezköy, Velimeşe, Ergene, Kapaklı, Tekirdağ, Marmara Ereğlisi ve Silivri’ye endüstriyel kaplama hizmeti sunar.",
   alternates: { canonical: "/bolgeler" },
 };
 

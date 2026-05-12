@@ -30,7 +30,7 @@ export function MobileCtaBar() {
         </a>
         <Link
           href="/teklif-al"
-          className="text-[#0a0a0b] bg-[var(--color-accent)]"
+          className="text-[var(--color-on-accent)] bg-[var(--color-accent)]"
           aria-label="Teklif al"
         >
           <FileText className="h-5 w-5" strokeWidth={2} />

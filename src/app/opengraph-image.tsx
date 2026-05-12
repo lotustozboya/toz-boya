@@ -13,8 +13,8 @@ export default async function OgImage() {
         style={{
           width: "100%",
           height: "100%",
-          background: "#0a0a0b",
-          color: "#fafafa",
+          background: "#f8f7f4",
+          color: "#1a1a1a",
           fontFamily: "sans-serif",
           padding: "72px",
           display: "flex",
@@ -29,7 +29,7 @@ export default async function OgImage() {
             viewBox="0 0 200 200"
             width="56"
             height="56"
-            fill="#fafafa"
+            fill="#1a1a1a"
             fillRule="evenodd"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -40,7 +40,7 @@ export default async function OgImage() {
             style={{
               width: 1,
               height: 36,
-              background: "#3f3f46",
+              background: "#c9c5bc",
             }}
           />
           <div style={{ display: "flex", flexDirection: "column" }}>
@@ -59,7 +59,7 @@ export default async function OgImage() {
                 fontSize: 11,
                 letterSpacing: 4.5,
                 textTransform: "uppercase",
-                color: "#a1a1aa",
+                color: "#5b5b5b",
                 marginTop: 6,
                 fontFamily: "monospace",
               }}
@@ -76,12 +76,12 @@ export default async function OgImage() {
               fontSize: 14,
               letterSpacing: 6,
               textTransform: "uppercase",
-              color: "#f59e0b",
+              color: "#b45309",
               fontWeight: 500,
               fontFamily: "monospace",
             }}
           >
-            Çorlu OSB · Tekirdağ / EST. 2014 / ISO 12944
+            Çorlu OSB · Tekirdağ / EST. 2014 / RAL · Jotun
           </div>
           <div
             style={{
@@ -102,7 +102,7 @@ export default async function OgImage() {
             display: "flex",
             justifyContent: "space-between",
             alignItems: "flex-end",
-            color: "#71717a",
+            color: "#8c8c8c",
             fontSize: 13,
             fontFamily: "monospace",
             letterSpacing: 2,

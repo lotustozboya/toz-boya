@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 
   return {
     title: `${city.name} Elektrostatik Toz Boya & Endüstriyel Kaplama`,
-    description: `${city.name} bölgesindeki üreticilere elektrostatik toz boya, fırın boya ve antikorozif kaplama hizmeti. Bölge içi nakliye desteği ve hızlı teslim.`,
+    description: `${city.name} bölgesindeki üreticilere elektrostatik toz boya, fırın boya ve vernik kaplama hizmeti. Bölge içi nakliye desteği ve hızlı teslim.`,
     alternates: { canonical: `/bolgeler/${slug}` },
   };
 }
@@ -98,10 +98,10 @@ export default async function CityPage({ params }: Params) {
               serviceTypes: [
                 "Elektrostatik Toz Boya",
                 "Fırın Boya",
+                "Vernik Kaplama",
+                "Yüzey Ön İşleme",
                 "Metal Boyama",
                 "Endüstriyel Kaplama",
-                "Antikorozif Kaplama",
-                "Kumlama",
               ],
             }),
             faqSchema(rich.faq),
@@ -146,7 +146,7 @@ export default async function CityPage({ params }: Params) {
         </div>
       </PageHero>
 
-      <section className="border-b border-[var(--color-line)] bg-[var(--color-surface)]/40">
+      <section className="section-tint-recess border-b border-[var(--color-line)]">
         <Container className="py-8 grid grid-cols-3 divide-x divide-[var(--color-line)]">
           {city.highlights.map((h) => (
             <div
@@ -206,7 +206,7 @@ export default async function CityPage({ params }: Params) {
         </div>
       </Section>
 
-      <Section size="md" className="border-t border-[var(--color-line)]">
+      <Section size="md" className="section-tint-raised border-t border-[var(--color-line)]">
         <SectionHeader
           eyebrow="Diğer Bölgeler"
           title="Yakındaki bölgelerimiz"

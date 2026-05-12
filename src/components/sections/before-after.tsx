@@ -112,7 +112,7 @@ function MobileCard({
         <span className="absolute top-3 left-3 z-10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.18em] bg-[#0a0a0b]/85 text-white tabular-nums backdrop-blur-sm">
           {String(idx + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
         </span>
-        <span className="absolute top-3 right-3 z-10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.18em] bg-[var(--color-accent)] text-[#0a0a0b]">
+        <span className="absolute top-3 right-3 z-10 px-2 py-0.5 font-mono text-[10px] uppercase tracking-[0.18em] bg-[var(--color-accent)] text-[var(--color-on-accent)]">
           Teslim
         </span>
 
@@ -211,7 +211,7 @@ function CompareModal({
         <span className="absolute top-3 left-3 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.18em] bg-[#0a0a0b]/85 text-white">
           Önişlem
         </span>
-        <span className="absolute top-3 right-3 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.18em] bg-[var(--color-accent)] text-[#0a0a0b]">
+        <span className="absolute top-3 right-3 px-2 py-1 font-mono text-[10px] uppercase tracking-[0.18em] bg-[var(--color-accent)] text-[var(--color-on-accent)]">
           Teslim
         </span>
 
@@ -292,7 +292,7 @@ function DesktopSlider({
         <span className="absolute top-3 left-3 z-10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.18em] bg-[#0a0a0b]/85 text-white backdrop-blur-sm">
           Önişlem
         </span>
-        <span className="absolute top-3 right-3 z-10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.18em] bg-[var(--color-accent)] text-[#0a0a0b]">
+        <span className="absolute top-3 right-3 z-10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.18em] bg-[var(--color-accent)] text-[var(--color-on-accent)]">
           Teslim
         </span>
 

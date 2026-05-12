@@ -10,10 +10,10 @@ import { site, telLink, whatsappLink } from "@/lib/site";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden border-b border-[var(--color-line)]">
+    <section className="dark-section relative overflow-hidden">
       <div className="absolute inset-0 bg-grid opacity-[0.4]" aria-hidden />
 
-      <Container className="relative pt-10 pb-12 md:pt-24 md:pb-24 lg:pt-28 lg:pb-28">
+      <Container className="relative pt-8 pb-10 md:pt-20 md:pb-20 lg:pt-24 lg:pb-24">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           {/* Copy column */}
           <div className="lg:col-span-7 flex flex-col gap-6 md:gap-7">
@@ -25,7 +25,7 @@ export function Hero() {
             >
               <span>Çorlu OSB · Tekirdağ</span>
               <span>EST. 2014</span>
-              <span>ISO 12944</span>
+              <span>Toz boya · Fırın · Vernik</span>
             </motion.div>
 
             <motion.h1
@@ -50,8 +50,8 @@ export function Hero() {
               <strong className="text-[var(--color-text)] font-semibold tabular-nums">
                 6 metreye
               </strong>{" "}
-              kadar elektrostatik toz boya, kumlama ve ISO 12944 antikorozif
-              kaplama hizmeti sunuyoruz.
+              kadar elektrostatik toz boya, fırın boya ve vernik kaplama
+              hizmeti sunuyoruz.
             </motion.p>
 
             <motion.div
@@ -87,7 +87,7 @@ export function Hero() {
             >
               <Spec value="11+" label="Yıllık tecrübe" first />
               <Spec value="6 m" label="Tek parça fırın" />
-              <Spec value="ISO 12944" label="C3–C5 sertifikalı" />
+              <Spec value="RAL · Jotun" label="Renk desteği" />
               <Spec value="48 sa" label="Acil teslim" />
             </motion.dl>
           </div>
@@ -150,9 +150,9 @@ function HeroVisual() {
           {/* Plates: lg+ only */}
           <Plate
             className="hidden lg:flex self-end max-w-[230px]"
-            label="Aylık kapasite"
-            value="25.000"
-            sub="m²"
+            label="Fırın hattı"
+            value="6 × 1.9 × 2"
+            sub="m"
           />
 
           {/* Big "11+" — visible across breakpoints */}

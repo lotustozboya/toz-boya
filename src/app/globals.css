@@ -1,25 +1,47 @@
 @import "tailwindcss";
 
 @theme {
-  /* ---------- Color tokens (industrial dark + amber accent) ---------- */
-  --color-bg: #0a0a0b;
-  --color-surface: #111113;
-  --color-surface-2: #18181b;
-  --color-line: #27272a;
-  --color-line-strong: #3f3f46;
+  /* ----------------------------------------------------------------
+     COLOR TOKENS — LIGHT-FIRST (premium industrial)
 
-  --color-text: #fafafa;
-  --color-text-muted: #a1a1aa;
-  --color-text-subtle: #71717a;
+     The site runs on a warm beige page by default. Sections that want
+     dramatic emphasis (Hero, CTA banner) wrap themselves in
+     `.dark-section`, which redefines all color tokens within that
+     scope. No component needs to know which mode it's in — they all
+     consume `var(--color-*)` and the surrounding scope decides.
+  ---------------------------------------------------------------- */
 
-  --color-accent: #f59e0b;
-  --color-accent-hover: #fbbf24;
-  --color-accent-soft: rgba(245, 158, 11, 0.12);
-  --color-accent-ring: rgba(245, 158, 11, 0.35);
+  /* Default = LIGHT mode
+     Three-tone warm spectrum — within ~2% luminance of each other.
+     Sections cycle through these tones to create depth without contrast.
+       --tone-base    page default
+       --tone-recess  slightly deeper, reads as "embedded module"
+       --tone-raised  near-white, reads as "elevated panel"
+  */
+  --tone-base: #f4f2ec;              /* page default, slightly warmer */
+  --tone-recess: #ece9e1;            /* deeper warm, "recessed" sections */
+  --tone-raised: #fbfaf7;            /* lifted panel, near-white */
 
-  --color-success: #10b981;
-  --color-warning: #f59e0b;
-  --color-danger: #ef4444;
+  --color-bg: var(--tone-base);
+  --color-surface: var(--tone-raised);
+  --color-surface-2: var(--tone-recess);
+  --color-line: #d9d5cc;             /* hairline divider, slightly more visible */
+  --color-line-strong: #b8b3a8;      /* prominent rule */
+
+  --color-text: #1a1a1a;             /* graphite — primary type */
+  --color-text-muted: #5b5b5b;       /* secondary copy */
+  --color-text-subtle: #8c8c8c;      /* tertiary / mono labels */
+
+  --color-accent: #b45309;           /* amber-700, readable on light */
+  --color-accent-hover: #9a4708;
+  --color-accent-soft: rgba(180, 83, 9, 0.10);
+  --color-accent-ring: rgba(180, 83, 9, 0.30);
+  --color-on-accent: #ffffff;        /* text drawn on top of accent fills */
+
+  /* Brand colors that don't theme */
+  --color-success: #047857;
+  --color-warning: #b45309;
+  --color-danger: #b91c1c;
   --color-whatsapp: #25d366;
   --color-whatsapp-hover: #1da851;
 
@@ -31,7 +53,7 @@
   --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono",
     Consolas, monospace;
 
-  /* ---------- Radius (industrial: sharp by default, soften only buttons/inputs) ---------- */
+  /* ---------- Radius ---------- */
   --radius-sm: 2px;
   --radius: 4px;
   --radius-lg: 6px;
@@ -40,25 +62,54 @@
   /* ---------- Container ---------- */
   --container-max: 1240px;
 
-  /* ---------- Vertical rhythm — section padding scale ----------
-     Mobile values are tightened deliberately to keep the homepage
-     under ~5,500px total scroll. Desktop values stay generous.
+  /* ---------- Vertical rhythm ----------
+     Tighter than typical SaaS rhythm. Premium machinery brands keep
+     section padding compact and let the data carry the visual weight.
   */
-  --pad-section-sm-y: 2.5rem;     /* 40px — mobile sm */
-  --pad-section-md-y: 3.5rem;     /* 56px — mobile md */
-  --pad-section-lg-y: 4.5rem;     /* 72px — mobile lg */
-  --pad-section-sm-y-md: 5rem;    /* 80px  @md */
-  --pad-section-md-y-md: 7rem;    /* 112px @md */
-  --pad-section-lg-y-md: 9.5rem;  /* 152px @md */
+  --pad-section-sm-y: 2rem;       /* 32px  — mobile sm */
+  --pad-section-md-y: 2.75rem;    /* 44px  — mobile md */
+  --pad-section-lg-y: 3.5rem;     /* 56px  — mobile lg */
+  --pad-section-sm-y-md: 4rem;    /* 64px   @md sm */
+  --pad-section-md-y-md: 5.5rem;  /* 88px   @md md */
+  --pad-section-lg-y-md: 7.5rem;  /* 120px  @md lg */
 
-  /* ---------- Header height (for sticky offset math) ---------- */
   --header-h: 64px;
   --header-h-md: 72px;
 
   /* ---------- Shadows ---------- */
-  --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px -12px rgb(0 0 0 / 0.5);
-  --shadow-glow: 0 0 0 1px rgba(245, 158, 11, 0.18),
-    0 12px 40px -12px rgba(245, 158, 11, 0.25);
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.05), 0 8px 24px -12px rgb(0 0 0 / 0.08);
+  --shadow-glow: 0 0 0 1px rgba(180, 83, 9, 0.15),
+    0 12px 40px -12px rgba(180, 83, 9, 0.20);
+}
+
+/* ----------------------------------------------------------------
+   DARK SECTION SCOPE
+
+   Wrap a section in <section class="dark-section">…</section>
+   to invert all tokens for that subtree. Every component inside
+   continues to use var(--color-*) and renders correctly without
+   any conditional logic. Used for Hero and CTA Banner only.
+---------------------------------------------------------------- */
+.dark-section {
+  --color-bg: #0a0a0b;
+  --color-surface: #111113;
+  --color-surface-2: #18181b;
+  --color-line: #27272a;
+  --color-line-strong: #3f3f46;
+
+  --color-text: #fafafa;
+  --color-text-muted: #a1a1aa;
+  --color-text-subtle: #71717a;
+
+  /* On dark, the brighter amber reads better */
+  --color-accent: #f59e0b;
+  --color-accent-hover: #fbbf24;
+  --color-accent-soft: rgba(245, 158, 11, 0.12);
+  --color-accent-ring: rgba(245, 158, 11, 0.35);
+  --color-on-accent: #0a0a0b;        /* dark text reads better on bright amber */
+
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 /* ---------- Base ---------- */
@@ -86,10 +137,9 @@
 
   ::selection {
     background-color: var(--color-accent);
-    color: #0a0a0b;
+    color: #ffffff;
   }
 
-  /* All headings: same family, same weight, same tracking. Size set per-utility. */
   h1,
   h2,
   h3,
@@ -101,13 +151,11 @@
     line-height: 1.1;
   }
 
-  /* Tabular numerals everywhere a number is shown — gives industrial precision feel */
   .tabular,
   [data-tabular] {
     font-variant-numeric: tabular-nums;
   }
 
-  /* Focus ring */
   :where(a, button, input, textarea, select, [tabindex]):focus-visible {
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
@@ -145,7 +193,21 @@
   text-wrap: pretty;
 }
 
-/* ---------- Section padding scale (single source of truth) ---------- */
+/* ---------- Section tinting ----------
+   Apply to a <section> wrapper to shift its background tone within
+   the warm spectrum. Creates layered depth without dark/light contrast.
+*/
+@utility section-tint-base {
+  background-color: var(--tone-base);
+}
+@utility section-tint-recess {
+  background-color: var(--tone-recess);
+}
+@utility section-tint-raised {
+  background-color: var(--tone-raised);
+}
+
+/* ---------- Section padding scale ---------- */
 @utility section-pad-sm {
   padding-block: var(--pad-section-sm-y);
   @media (min-width: 768px) {
@@ -165,24 +227,18 @@
   }
 }
 
-/* ---------- Heading scale (single source of truth) ----------
-   Only four sizes ship across the site. Apply via these utilities.
-   - h-hero    → home hero only
-   - h-page    → all inner page H1s
-   - h-section → all in-page H2s
-   - h-card    → in-card H3s
-*/
+/* ---------- Heading scale ---------- */
 @utility h-hero {
   font-family: var(--font-display);
   font-weight: 600;
   letter-spacing: -0.035em;
   line-height: 1.0;
-  font-size: 2.5rem;            /* 40px */
+  font-size: 2.5rem;
   @media (min-width: 768px) {
-    font-size: 3.5rem;          /* 56px */
+    font-size: 3.5rem;
   }
   @media (min-width: 1024px) {
-    font-size: 4.25rem;         /* 68px */
+    font-size: 4.25rem;
   }
 }
 @utility h-page {
@@ -190,9 +246,9 @@
   font-weight: 600;
   letter-spacing: -0.025em;
   line-height: 1.05;
-  font-size: 2.25rem;           /* 36px */
+  font-size: 2.25rem;
   @media (min-width: 768px) {
-    font-size: 3rem;            /* 48px */
+    font-size: 3rem;
   }
 }
 @utility h-section {
@@ -200,9 +256,9 @@
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.1;
-  font-size: 1.75rem;           /* 28px */
+  font-size: 1.75rem;
   @media (min-width: 768px) {
-    font-size: 2.25rem;         /* 36px */
+    font-size: 2.25rem;
   }
 }
 @utility h-card {
@@ -210,7 +266,7 @@
   font-weight: 600;
   letter-spacing: -0.015em;
   line-height: 1.2;
-  font-size: 1.125rem;          /* 18px */
+  font-size: 1.125rem;
 }
 
 /* ---------- Mobile horizontal scroller (carousel) ---------- */
@@ -220,7 +276,6 @@
   scroll-snap-type: x mandatory;
   scroll-padding-inline: 1.25rem;
   -webkit-overflow-scrolling: touch;
-  /* Hide scrollbar */
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
@@ -233,7 +288,6 @@
   flex-shrink: 0;
 }
 
-/* Edge fade — tells the user there's more to the right */
 .snap-row-fade {
   position: relative;
 }
@@ -252,18 +306,34 @@
   pointer-events: none;
 }
 
-/* ---------- Decorative backgrounds (used sparingly) ---------- */
+/* ---------- Decorative backgrounds ---------- */
+/* Grid uses currentColor token at low opacity — works on both modes. */
 .bg-grid {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+.dark-section .bg-grid {
   background-image: linear-gradient(
       to right,
       rgba(255, 255, 255, 0.035) 1px,
       transparent 1px
     ),
     linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 64px 64px;
 }
 
 .bg-radial-fade {
+  background: radial-gradient(
+    ellipse 80% 50% at 50% 0%,
+    rgba(180, 83, 9, 0.05),
+    transparent 60%
+  );
+}
+.dark-section .bg-radial-fade {
   background: radial-gradient(
     ellipse 80% 50% at 50% 0%,
     rgba(245, 158, 11, 0.06),
@@ -296,7 +366,7 @@
   animation-name: acc-up;
 }
 
-/* Hairline — solid, structural, not decorative */
+/* Hairline */
 .hairline {
   height: 1px;
   width: 100%;
@@ -308,24 +378,23 @@
   background-color: var(--color-line-strong);
 }
 
-/* Section heading eyebrow — monospace, no decorative line, uppercase tracking */
+/* Section heading eyebrow */
 .eyebrow {
   display: inline-block;
   font-family: var(--font-mono);
   text-transform: uppercase;
   letter-spacing: 0.22em;
-  font-size: 0.6875rem; /* 11px */
-  font-weight: 400;
+  font-size: 0.6875rem;
+  font-weight: 500;
   color: var(--color-text-muted);
   font-variant-numeric: tabular-nums;
 }
 
-/* Accent variant — used only when calling out a critical signal */
 .eyebrow-accent {
   color: var(--color-accent);
 }
 
-/* Industrial small-caps technical strip — slash-separated metadata line */
+/* Industrial small-caps technical strip */
 .tech-strip {
   display: inline-flex;
   align-items: center;
@@ -345,8 +414,7 @@
   font-weight: 300;
 }
 
-/* Spec row — datasheet-style key/value line with hairline separator
-   <dl class="spec-list"><div class="spec-row"><dt>...</dt><dd>...</dd></div></dl> */
+/* Spec row */
 .spec-list {
   display: flex;
   flex-direction: column;

@@ -119,7 +119,7 @@ export function CityRich({ city, rich }: Props) {
       </nav>
 
       {/* ─── TRUST SIGNALS GRID ──────────────────────── */}
-      <Section size="md" id="neden-biz">
+      <Section size="md" id="neden-biz" className="section-tint-recess border-t border-[var(--color-line)]">
         <SectionHeader
           eyebrow={`${city.name} için yerel güven`}
           title={`${city.name}’da neden Lotus Elektrostatik Boya?`}
@@ -197,7 +197,7 @@ export function CityRich({ city, rich }: Props) {
       </Section>
 
       {/* ─── NEIGHBORHOODS / SUB-ZONES ──────────────── */}
-      <Section size="md" id="bolgeler" className="border-t border-[var(--color-line)]">
+      <Section size="md" id="bolgeler" className="section-tint-recess border-t border-[var(--color-line)]">
         <SectionHeader
           eyebrow={`${city.name} sanayi bölgeleri`}
           title="Hizmet verdiğimiz alt bölgeler"
@@ -268,7 +268,7 @@ export function CityRich({ city, rich }: Props) {
       </Section>
 
       {/* ─── SECTORS SERVED ─────────────────────────── */}
-      <Section size="sm" className="border-t border-[var(--color-line)]">
+      <Section size="sm" className="section-tint-raised border-t border-[var(--color-line)]">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-baseline">
           <div className="lg:col-span-5 flex flex-col gap-5">
             <span className="eyebrow">Hizmet Verdiğimiz Sektörler</span>
@@ -299,7 +299,7 @@ export function CityRich({ city, rich }: Props) {
 
       {/* ─── LOCAL TESTIMONIAL ─────────────────────── */}
       {rich.testimonial && (
-        <Section size="md" id="referans" className="border-t border-[var(--color-line)]">
+        <Section size="md" id="referans" className="section-tint-recess border-t border-[var(--color-line)]">
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
             <div className="lg:col-span-3">
               <span className="eyebrow">{city.name} Referansı</span>

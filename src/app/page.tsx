@@ -1,11 +1,8 @@
 import { Hero } from "@/components/sections/hero";
 import { Stats } from "@/components/sections/stats";
 import { ServicesGrid } from "@/components/sections/services-grid";
-import { WhyUs } from "@/components/sections/why-us";
-import { Process } from "@/components/sections/process";
-import { BeforeAfter } from "@/components/sections/before-after";
-import { References } from "@/components/sections/references";
 import { Regions } from "@/components/sections/regions";
+import { Industries } from "@/components/sections/industries";
 import { Testimonials } from "@/components/sections/testimonials";
 import { FaqSection } from "@/components/sections/faq-section";
 import { CtaBanner } from "@/components/sections/cta-banner";
@@ -18,11 +15,8 @@ export default function HomePage() {
       <Hero />
       <Stats />
       <ServicesGrid />
-      <WhyUs />
-      <Process />
-      <BeforeAfter />
-      <References />
       <Regions />
+      <Industries />
       <Testimonials />
       <FaqSection
         items={faqs.slice(0, 4)}

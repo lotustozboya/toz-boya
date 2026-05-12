@@ -14,10 +14,10 @@ export function CtaBanner({
   description = "Parça resminizi veya numunenizi WhatsApp üzerinden iletin; 24 saat içinde detaylı fiyat ve teslim süresi ile geri dönelim.",
 }: CtaBannerProps) {
   return (
-    <section className="section-pad-md border-t border-[var(--color-line)]">
+    <section className="section-tint-recess section-pad-md border-t border-[var(--color-line)]">
       <Container>
         <div className="border border-[var(--color-line-strong)] bg-[var(--color-surface)] grid lg:grid-cols-12">
-          <div className="lg:col-span-8 p-5 md:p-12 flex flex-col gap-4 md:gap-5 border-b lg:border-b-0 lg:border-r border-[var(--color-line)]">
+          <div className="lg:col-span-8 p-5 md:p-10 flex flex-col gap-4 md:gap-5 border-b lg:border-b-0 lg:border-r border-[var(--color-line)]">
             <div className="flex items-center gap-3">
               <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-[var(--color-accent)] tabular-nums">
                 01 / Teklif İste
@@ -32,7 +32,7 @@ export function CtaBanner({
               {description}
             </p>
           </div>
-          <div className="lg:col-span-4 p-5 md:p-10 grid grid-cols-2 lg:grid-cols-1 gap-2 md:gap-3 justify-center items-center">
+          <div className="lg:col-span-4 p-5 md:p-8 grid grid-cols-2 lg:grid-cols-1 gap-2 md:gap-3 justify-center items-center">
             <Button asChild size="lg" className="w-full">
               <Link href="/teklif-al">
                 <span className="hidden sm:inline">Teklif Formu</span>

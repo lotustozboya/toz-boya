@@ -3,17 +3,17 @@ import { Section, SectionHeader } from "@/components/ui/section";
 const items = [
   {
     code: "01",
-    title: "ISO 12944 Sertifikalı",
+    title: "RAL & Jotun Desteği",
     detail:
-      "Antikorozif sistemlerimiz uluslararası standartta dökümante edilmiştir.",
-    spec: "C3 / C4 / C5",
+      "RAL kataloğundaki tüm renkleri ve Jotun renk kodlarını destekliyor; numune üzerinden özel renk eşleştirme yapıyoruz.",
+    spec: "RAL · Jotun",
   },
   {
     code: "02",
-    title: "6 m Pişirme Fırını",
+    title: "Büyük Hacimli Pişirme Fırını",
     detail:
-      "Tek parça 6 metreye kadar gabarili konstrüksiyonları tek seferde işliyoruz.",
-    spec: "6.000 × 2.200 mm",
+      "6 × 1.9 × 2 metre kapasiteli fırınımızda büyük gabarili konstrüksiyonları tek seferde işliyoruz.",
+    spec: "6 × 1.9 × 2 m",
   },
   {
     code: "03",

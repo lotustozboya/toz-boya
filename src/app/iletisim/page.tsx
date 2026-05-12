@@ -14,8 +14,10 @@ export const metadata: Metadata = {
   alternates: { canonical: "/iletisim" },
 };
 
+// Google Maps embed URL — pinned to the actual Lotus Elektrostatik Boya
+// place ID, sourced from Google Maps "Embed a map" share dialog.
 const mapsEmbed =
-  "https://www.google.com/maps?q=Hatip+Mahallesi+Akasma+Sokak+H+Blok+No+4CA+%C3%87orlu+Tekirda%C4%9F&z=15&output=embed";
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24034.29043856892!2d27.7347543743164!3d41.1501036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b4e7f082f4717f%3A0x4c95d621e7c6a068!2sLotus%20Elektrostatik%20Boya!5e0!3m2!1str!2str!4v1778618832888!5m2!1str!2str";
 
 export default function ContactPage() {
   return (
@@ -49,7 +51,7 @@ export default function ContactPage() {
       </Section>
 
       {/* Teklif formu — sayfanın conversion noktası */}
-      <Section size="md" className="border-t border-[var(--color-line)]">
+      <Section size="md" className="section-tint-recess border-t border-[var(--color-line)]">
         <QuoteForm />
       </Section>
 

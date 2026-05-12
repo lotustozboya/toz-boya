@@ -5,11 +5,11 @@ import { cities } from "@/lib/data/cities";
 
 export function Regions() {
   return (
-    <Section size="md">
+    <Section size="md" className="section-tint-recess">
       <SectionHeader
         eyebrow="Hizmet Bölgeleri"
-        title="Trakya bölgesinin endüstriyel kaplama merkezi"
-        description="Çorlu OSB merkezli tesisimizden başlayarak Tekirdağ’ın tüm sanayi bölgelerine düzenli sefer ve teslim hizmeti sunuyoruz."
+        title="Trakya ve Marmara bölgesinde sekiz üretim noktası"
+        description="Çorlu OSB merkezli tesisimizden Çerkezköy, Velimeşe, Ergene, Kapaklı, Tekirdağ, Marmara Ereğlisi ve Silivri’ye düzenli sefer ve teslim hizmeti."
       />
 
       <div className="mt-8 md:mt-14 grid grid-cols-2 lg:grid-cols-4 border-t border-l border-[var(--color-line)]">

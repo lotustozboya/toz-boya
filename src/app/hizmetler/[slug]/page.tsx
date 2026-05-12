@@ -149,7 +149,7 @@ export default async function ServiceDetailPage({ params }: Params) {
       </Section>
 
       {/* Process */}
-      <Section size="md" className="border-t border-[var(--color-line)]">
+      <Section size="md" className="section-tint-recess border-t border-[var(--color-line)]">
         <SectionHeader
           eyebrow="Uygulama Süreci"
           title={`${service.shortTitle} adım adım nasıl yapılır?`}

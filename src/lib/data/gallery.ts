@@ -17,16 +17,16 @@ export interface BeforeAfterItem {
 
 export const beforeAfter: BeforeAfterItem[] = [
   {
-    title: "Korozyona Uğramış Çelik Konstrüksiyon",
-    category: "Kumlama + Antikorozif",
+    title: "Dekoratif Mobilya Aksamı — Vernik Üstü",
+    category: "Vernik Kaplama",
     before:
-      "https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1400&q=70",
+      "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1400&q=70&sat=-100",
     after:
-      "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1400&q=70",
-    beforeAlt: "Pas ve oksitlenme görülen çelik konstrüksiyon",
-    afterAlt: "Antikorozif kaplama sonrası yenilenmiş çelik konstrüksiyon",
+      "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1400&q=70",
+    beforeAlt: "Mat boya uygulanmış mobilya aksamı, vernik öncesi",
+    afterAlt: "Yarı mat vernik kaplama sonrası mobilya aksamı",
     detail:
-      "Sa 2.5 standardında kumlama + epoksi astar + poliüretan topcoat. ISO 12944 C4 sınıfı dayanım.",
+      "RAL 9005 elektrostatik toz boya üzerine yarı mat şeffaf vernik. UV dayanımı ve renk derinliği artırıldı.",
   },
   {
     title: "Endüstriyel Profil — Eski Boya",
@@ -57,13 +57,6 @@ export const beforeAfter: BeforeAfterItem[] = [
 // Using Unsplash placeholders — replace with real project images.
 export const gallery: GalleryItem[] = [
   {
-    title: "Çelik Konstrüksiyon Antikorozif Kaplama",
-    category: "Antikorozif",
-    image:
-      "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1200&q=70",
-    alt: "Antikorozif boya uygulanmış çelik konstrüksiyon",
-  },
-  {
     title: "Endüstriyel Profil Toz Boya",
     category: "Elektrostatik",
     image:
@@ -85,11 +78,11 @@ export const gallery: GalleryItem[] = [
     alt: "Galvaniz sac üzerine polyester toz boya kaplama",
   },
   {
-    title: "Tank ve Basınçlı Kap Kumlama",
-    category: "Kumlama",
+    title: "Mobilya Aksamı — Şeffaf Vernik",
+    category: "Vernik Kaplama",
     image:
-      "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=1200&q=70",
-    alt: "Tank ve basınçlı kap için kumlama uygulaması",
+      "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1200&q=70",
+    alt: "Şeffaf vernik kaplama ile bitirilmiş dekoratif mobilya aksamı",
   },
   {
     title: "Otomotiv Yan Sanayi Parçaları",
@@ -104,6 +97,13 @@ export const gallery: GalleryItem[] = [
     image:
       "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1200&q=70",
     alt: "Asansör kabin paneli fırın boya uygulaması",
+  },
+  {
+    title: "Aydınlatma Armatürü — Parlak Vernik",
+    category: "Vernik Kaplama",
+    image:
+      "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=1200&q=70",
+    alt: "Parlak vernik kaplama uygulanmış aydınlatma armatürü",
   },
   {
     title: "Mobilya İskeleti RAL 9005",

@@ -40,10 +40,12 @@ export function localBusinessSchema() {
     areaServed: [
       "Çorlu",
       "Çerkezköy",
-      "Tekirdağ",
+      "Velimeşe",
+      "Ergene",
       "Kapaklı",
-      "Süleymanpaşa",
+      "Tekirdağ",
       "Marmara Ereğlisi",
+      "Silivri",
     ],
     openingHoursSpecification: [
       {
@@ -99,7 +101,16 @@ export function serviceSchema(service: {
     name: service.title,
     description: service.description,
     provider: { "@id": `${site.url}#business` },
-    areaServed: ["Çorlu", "Çerkezköy", "Tekirdağ", "Kapaklı"],
+    areaServed: [
+      "Çorlu",
+      "Çerkezköy",
+      "Velimeşe",
+      "Ergene",
+      "Kapaklı",
+      "Tekirdağ",
+      "Marmara Ereğlisi",
+      "Silivri",
+    ],
     serviceType: service.title,
     url: `${site.url}/hizmetler/${service.slug}`,
   };
