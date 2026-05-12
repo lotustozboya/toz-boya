@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Lotus Boya — LB monogram (orijinal logodan SVG'ye dönüştürülmüş)
+
+  Grid: 200 × 200 units
+  Construction: Klasik serif L + iki odalı serif B, aralarında 45° V-notch
+  ile interlocking joint. Görseldeki proportions korunmuştur.
+
+  Color: currentColor — herhangi bir arka plan üzerinde çalışır.
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 200 200"
+  fill="currentColor"
+  fill-rule="evenodd"
+  aria-labelledby="lb-title"
+  role="img"
+>
+  <title id="lb-title">Lotus Boya</title>
+
+  <!--
+    L harfi
+    Klasik serif: üst serif kanatları + kalın stem + uzun ayak.
+    Sağ alt köşede 45° pah (B ile interlocking joint için).
+
+    Koordinat planı:
+      Üst serif kanat: x 6–14, y 4–18 (sol kanat) ; x 36–44, y 4–18 (sağ kanat)
+      Üst yatay üst başlık: x 14–36, y 4–14
+      Stem (dikey gövde): x 18–32, y 14–158
+      Alt ayak (foot): y 158–192, geniş
+      Sağ alt 45° pah: (94, 158) → (74, 178)
+  -->
+  <path d="
+    M 4 14
+    L 4 4
+    L 50 4
+    L 50 14
+    L 36 14
+    L 36 158
+    L 96 158
+    L 76 178
+    L 76 192
+    L 4 192
+    L 4 178
+    L 18 178
+    L 18 14
+    Z
+  " />
+
+  <!--
+    B harfi
+    Klasik serif: üst kavisli oda + middle bar + alt kavisli oda.
+    Sol alt köşede 45° pah (L ile interlocking).
+    Tek compound path with even-odd fill — outer outline + 2 counter shapes.
+
+    Koordinat planı:
+      Sol stem üst köşe: x=84, y=4
+      Üst sağ kanat eğrisi (yukarı): x 84–158, y 4–94
+      Middle bar: y 88–104
+      Alt sağ kanat eğrisi (aşağı): x 84–168, y 100–192
+      Sol alt 45° pah: (104, 192) → (84, 172)
+      Counter (top): x 116–142, y 24–80
+      Counter (bottom): x 116–152, y 116–172
+  -->
+  <path d="
+    M 84 4
+    L 130 4
+    Q 158 4 158 48
+    Q 158 78 138 90
+    L 138 92
+    Q 168 100 168 142
+    Q 168 192 132 192
+    L 104 192
+    L 84 172
+    Z
+
+    M 116 24
+    L 124 24
+    Q 142 24 142 50
+    Q 142 80 124 80
+    L 116 80
+    Z
+
+    M 116 116
+    L 124 116
+    Q 152 116 152 144
+    Q 152 172 124 172
+    L 116 172
+    Z
+  " />
+</svg>

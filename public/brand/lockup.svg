@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Lotus Boya — horizontal lockup (monogram + wordmark)
+
+  Layout:  [LB mark]  │  LOTUS BOYA
+                          ELEKTROSTATİK BOYA
+
+  Grid: 240 × 60 viewBox
+  Mark: 44 × 44 inside a 60-tall bounding area, vertically centered
+  Vertical hairline divider between mark and wordmark
+  Wordmark: 2-line lockup, primary 18px / secondary 9px small caps
+
+  Color: currentColor — drop into any background.
+  Font: Space Grotesk (load via @font-face). Falls back to system geometric.
+-->
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 240 60"
+  fill="currentColor"
+  fill-rule="evenodd"
+  aria-labelledby="lockup-title"
+  role="img"
+>
+  <title id="lockup-title">Lotus Boya — Elektrostatik Boya</title>
+
+  <!-- Monogram — translated to (0, 8) and scaled to 44×44 -->
+  <g transform="translate(0 8) scale(0.9167)">
+    <path d="
+      M 0 0 H 8 V 34 H 24 L 18 40 V 48 H 0 Z
+    " />
+    <path d="
+      M 26 0 H 44 V 48 H 32 L 26 42 Z
+      M 32 6 H 38 V 16 H 32 Z
+      M 32 32 H 38 V 42 H 32 Z
+    " />
+  </g>
+
+  <!-- Vertical hairline divider -->
+  <rect x="60" y="14" width="1" height="32" opacity="0.35" />
+
+  <!-- Wordmark: primary line -->
+  <text
+    x="74"
+    y="30"
+    font-family="'Space Grotesk', 'Inter', system-ui, sans-serif"
+    font-weight="600"
+    font-size="20"
+    letter-spacing="2"
+    fill="currentColor"
+  >LOTUS BOYA</text>
+
+  <!-- Wordmark: secondary line (small caps technical strip) -->
+  <text
+    x="74"
+    y="46"
+    font-family="ui-monospace, 'SF Mono', 'Cascadia Code', monospace"
+    font-weight="400"
+    font-size="8"
+    letter-spacing="2.4"
+    opacity="0.65"
+    fill="currentColor"
+  >ELEKTROSTATİK BOYA</text>
+</svg>

@@ -1,0 +1,375 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---------- Color tokens (industrial dark + amber accent) ---------- */
+  --color-bg: #0a0a0b;
+  --color-surface: #111113;
+  --color-surface-2: #18181b;
+  --color-line: #27272a;
+  --color-line-strong: #3f3f46;
+
+  --color-text: #fafafa;
+  --color-text-muted: #a1a1aa;
+  --color-text-subtle: #71717a;
+
+  --color-accent: #f59e0b;
+  --color-accent-hover: #fbbf24;
+  --color-accent-soft: rgba(245, 158, 11, 0.12);
+  --color-accent-ring: rgba(245, 158, 11, 0.35);
+
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-hover: #1da851;
+
+  /* ---------- Type ---------- */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: var(--font-space), var(--font-inter), ui-sans-serif,
+    system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono",
+    Consolas, monospace;
+
+  /* ---------- Radius (industrial: sharp by default, soften only buttons/inputs) ---------- */
+  --radius-sm: 2px;
+  --radius: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+
+  /* ---------- Container ---------- */
+  --container-max: 1240px;
+
+  /* ---------- Vertical rhythm — section padding scale ----------
+     Mobile values are tightened deliberately to keep the homepage
+     under ~5,500px total scroll. Desktop values stay generous.
+  */
+  --pad-section-sm-y: 2.5rem;     /* 40px — mobile sm */
+  --pad-section-md-y: 3.5rem;     /* 56px — mobile md */
+  --pad-section-lg-y: 4.5rem;     /* 72px — mobile lg */
+  --pad-section-sm-y-md: 5rem;    /* 80px  @md */
+  --pad-section-md-y-md: 7rem;    /* 112px @md */
+  --pad-section-lg-y-md: 9.5rem;  /* 152px @md */
+
+  /* ---------- Header height (for sticky offset math) ---------- */
+  --header-h: 64px;
+  --header-h-md: 72px;
+
+  /* ---------- Shadows ---------- */
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px -12px rgb(0 0 0 / 0.5);
+  --shadow-glow: 0 0 0 1px rgba(245, 158, 11, 0.18),
+    0 12px 40px -12px rgba(245, 158, 11, 0.25);
+}
+
+/* ---------- Base ---------- */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    border-color: var(--color-line);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: #0a0a0b;
+  }
+
+  /* All headings: same family, same weight, same tracking. Size set per-utility. */
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.025em;
+    font-weight: 600;
+    color: var(--color-text);
+    line-height: 1.1;
+  }
+
+  /* Tabular numerals everywhere a number is shown — gives industrial precision feel */
+  .tabular,
+  [data-tabular] {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Focus ring */
+  :where(a, button, input, textarea, select, [tabindex]):focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* ---------- Layout utilities ---------- */
+@utility container-page {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  max-width: var(--container-max);
+
+  @media (min-width: 768px) {
+    padding-inline: 2rem;
+  }
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility text-pretty {
+  text-wrap: pretty;
+}
+
+/* ---------- Section padding scale (single source of truth) ---------- */
+@utility section-pad-sm {
+  padding-block: var(--pad-section-sm-y);
+  @media (min-width: 768px) {
+    padding-block: var(--pad-section-sm-y-md);
+  }
+}
+@utility section-pad-md {
+  padding-block: var(--pad-section-md-y);
+  @media (min-width: 768px) {
+    padding-block: var(--pad-section-md-y-md);
+  }
+}
+@utility section-pad-lg {
+  padding-block: var(--pad-section-lg-y);
+  @media (min-width: 768px) {
+    padding-block: var(--pad-section-lg-y-md);
+  }
+}
+
+/* ---------- Heading scale (single source of truth) ----------
+   Only four sizes ship across the site. Apply via these utilities.
+   - h-hero    → home hero only
+   - h-page    → all inner page H1s
+   - h-section → all in-page H2s
+   - h-card    → in-card H3s
+*/
+@utility h-hero {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.0;
+  font-size: 2.5rem;            /* 40px */
+  @media (min-width: 768px) {
+    font-size: 3.5rem;          /* 56px */
+  }
+  @media (min-width: 1024px) {
+    font-size: 4.25rem;         /* 68px */
+  }
+}
+@utility h-page {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  font-size: 2.25rem;           /* 36px */
+  @media (min-width: 768px) {
+    font-size: 3rem;            /* 48px */
+  }
+}
+@utility h-section {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-size: 1.75rem;           /* 28px */
+  @media (min-width: 768px) {
+    font-size: 2.25rem;         /* 36px */
+  }
+}
+@utility h-card {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  font-size: 1.125rem;          /* 18px */
+}
+
+/* ---------- Mobile horizontal scroller (carousel) ---------- */
+.snap-row {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 1.25rem;
+  -webkit-overflow-scrolling: touch;
+  /* Hide scrollbar */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.snap-row::-webkit-scrollbar {
+  display: none;
+}
+.snap-row > * {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  flex-shrink: 0;
+}
+
+/* Edge fade — tells the user there's more to the right */
+.snap-row-fade {
+  position: relative;
+}
+.snap-row-fade::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 2.5rem;
+  background: linear-gradient(
+    to left,
+    var(--color-bg) 0%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* ---------- Decorative backgrounds (used sparingly) ---------- */
+.bg-grid {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+.bg-radial-fade {
+  background: radial-gradient(
+    ellipse 80% 50% at 50% 0%,
+    rgba(245, 158, 11, 0.06),
+    transparent 60%
+  );
+}
+
+/* Radix accordion keyframes */
+@keyframes acc-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+@keyframes acc-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+[data-acc-content][data-state="open"] {
+  animation-name: acc-down;
+}
+[data-acc-content][data-state="closed"] {
+  animation-name: acc-up;
+}
+
+/* Hairline — solid, structural, not decorative */
+.hairline {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-line);
+}
+.hairline-strong {
+  height: 1px;
+  width: 100%;
+  background-color: var(--color-line-strong);
+}
+
+/* Section heading eyebrow — monospace, no decorative line, uppercase tracking */
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.6875rem; /* 11px */
+  font-weight: 400;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Accent variant — used only when calling out a critical signal */
+.eyebrow-accent {
+  color: var(--color-accent);
+}
+
+/* Industrial small-caps technical strip — slash-separated metadata line */
+.tech-strip {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  font-variant-numeric: tabular-nums;
+}
+.tech-strip > span:not(:last-child)::after {
+  content: "/";
+  margin-left: 0.75rem;
+  color: var(--color-text-subtle);
+  font-weight: 300;
+}
+
+/* Spec row — datasheet-style key/value line with hairline separator
+   <dl class="spec-list"><div class="spec-row"><dt>...</dt><dd>...</dd></div></dl> */
+.spec-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--color-line);
+}
+.spec-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: baseline;
+  gap: 1rem;
+  padding-block: 1rem;
+  border-bottom: 1px solid var(--color-line);
+}
+.spec-row > dt {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--color-text-subtle);
+  font-variant-numeric: tabular-nums;
+}
+.spec-row > dd {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  line-height: 1.55;
+}
