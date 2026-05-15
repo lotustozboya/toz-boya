@@ -54,62 +54,59 @@ export const beforeAfter: BeforeAfterItem[] = [
   },
 ];
 
-// Using Unsplash placeholders — replace with real project images.
 export const gallery: GalleryItem[] = [
   {
-    title: "Endüstriyel Profil Toz Boya",
+    title: "Elektrostatik Toz Boya Uygulaması",
     category: "Elektrostatik",
-    image:
-      "https://images.unsplash.com/photo-1581094288338-2314dddb7ece?auto=format&fit=crop&w=1200&q=70",
-    alt: "Elektrostatik toz boya uygulanmış endüstriyel profiller",
+    image: "/galeri/WhatsApp Image 2026-05-12 at 13.24.13.jpeg",
+    alt: "Elektrostatik toz boya uygulaması",
   },
   {
-    title: "Beyaz Eşya Fırın Boya Hattı",
-    category: "Fırın Boya",
-    image:
-      "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=1200&q=70",
-    alt: "Beyaz eşya parçaları için fırın boya hattı",
-  },
-  {
-    title: "Galvaniz Sac Polyester Kaplama",
+    title: "Elektrostatik Toz Boya Uygulaması",
     category: "Elektrostatik",
-    image:
-      "https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=1200&q=70",
-    alt: "Galvaniz sac üzerine polyester toz boya kaplama",
+    image: "/galeri/WhatsApp Image 2026-05-12 at 13.24.13 (1).jpeg",
+    alt: "Elektrostatik toz boya uygulaması",
   },
   {
-    title: "Mobilya Aksamı — Şeffaf Vernik",
-    category: "Vernik Kaplama",
-    image:
-      "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1200&q=70",
-    alt: "Şeffaf vernik kaplama ile bitirilmiş dekoratif mobilya aksamı",
-  },
-  {
-    title: "Otomotiv Yan Sanayi Parçaları",
+    title: "Elektrostatik Toz Boya Uygulaması",
     category: "Elektrostatik",
-    image:
-      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=70",
-    alt: "Otomotiv yan sanayi parçaları için elektrostatik kaplama",
+    image: "/galeri/WhatsApp Image 2026-05-12 at 13.24.14.jpeg",
+    alt: "Elektrostatik toz boya uygulaması",
   },
   {
-    title: "Asansör Kabin Paneli",
-    category: "Fırın Boya",
-    image:
-      "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?auto=format&fit=crop&w=1200&q=70",
-    alt: "Asansör kabin paneli fırın boya uygulaması",
-  },
-  {
-    title: "Aydınlatma Armatürü — Parlak Vernik",
-    category: "Vernik Kaplama",
-    image:
-      "https://images.unsplash.com/photo-1581093588401-fbb62a02f120?auto=format&fit=crop&w=1200&q=70",
-    alt: "Parlak vernik kaplama uygulanmış aydınlatma armatürü",
-  },
-  {
-    title: "Mobilya İskeleti RAL 9005",
+    title: "Elektrostatik Toz Boya Uygulaması",
     category: "Elektrostatik",
-    image:
-      "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?auto=format&fit=crop&w=1200&q=70",
-    alt: "RAL 9005 siyah elektrostatik kaplama mobilya iskeleti",
+    image: "/galeri/WhatsApp Image 2026-05-12 at 13.24.15.jpeg",
+    alt: "Elektrostatik toz boya uygulaması",
+  },
+  {
+    title: "Elektrostatik Toz Boya Uygulaması",
+    category: "Elektrostatik",
+    image: "/galeri/WhatsApp Image 2026-05-12 at 13.24.15 (1).jpeg",
+    alt: "Elektrostatik toz boya uygulaması",
+  },
+  {
+    title: "Elektrostatik Toz Boya Uygulaması",
+    category: "Elektrostatik",
+    image: "/galeri/WhatsApp Image 2026-05-12 at 13.24.16.jpeg",
+    alt: "Elektrostatik toz boya uygulaması",
+  },
+  {
+    title: "Elektrostatik Toz Boya Uygulaması",
+    category: "Elektrostatik",
+    image: "/galeri/WhatsApp Image 2026-05-12 at 13.24.16 (1).jpeg",
+    alt: "Elektrostatik toz boya uygulaması",
+  },
+  {
+    title: "Elektrostatik Toz Boya Uygulaması",
+    category: "Elektrostatik",
+    image: "/galeri/WhatsApp Image 2026-05-12 at 13.24.57.jpeg",
+    alt: "Elektrostatik toz boya uygulaması",
+  },
+  {
+    title: "Elektrostatik Toz Boya Uygulaması",
+    category: "Elektrostatik",
+    image: "/galeri/WhatsApp Image 2026-05-14 at 11.26.57.jpeg",
+    alt: "Elektrostatik toz boya uygulaması",
   },
 ];

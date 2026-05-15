@@ -18,6 +18,12 @@ export function ContactInfo() {
       href: telLink(),
     },
     {
+      icon: <Phone className="h-4 w-4" strokeWidth={1.5} />,
+      label: "Telefon 2",
+      value: site.contact.phone2Display,
+      href: `tel:${site.contact.phone2Href}`,
+    },
+    {
       icon: <MessageCircle className="h-4 w-4" strokeWidth={1.5} />,
       label: "WhatsApp",
       value: site.contact.whatsappDisplay,
@@ -54,7 +60,7 @@ export function ContactInfo() {
 }
 
 function Row({ item }: { item: InfoEntry }) {
-  const isNumeric = item.label === "Telefon" || item.label === "WhatsApp";
+  const isNumeric = item.label === "Telefon" || item.label === "Telefon 2" || item.label === "WhatsApp";
 
   const inner = (
     <div className="grid grid-cols-12 gap-4 items-baseline py-5 md:py-6">

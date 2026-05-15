@@ -102,7 +102,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="tr" className={`${inter.variable} ${space.variable}`}>
-      <body className="min-h-screen flex flex-col antialiased">
+      <body className="min-h-screen flex flex-col antialiased" suppressHydrationWarning>
         <Header />
         <main className="flex-1 pb-20 md:pb-0">{children}</main>
         <Footer />

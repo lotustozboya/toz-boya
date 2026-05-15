@@ -13,13 +13,15 @@ export const site = {
   founded: "2014",
 
   contact: {
-    phoneDisplay: "+90 536 695 48 49",
-    phoneHref: "+905366954849",
+    phoneDisplay: "+90 539 625 24 57",
+    phoneHref: "+905396252457",
+    phone2Display: "+90 536 695 48 49",
+    phone2Href: "+905366954849",
     whatsappDisplay: "+90 536 695 48 49",
     whatsappNumber: "905366954849",
     whatsappMessage:
       "Merhaba, web siteniz üzerinden elektrostatik toz boya hizmetleriniz için teklif almak istiyorum.",
-    email: "info@lotuselektrostatik.com", // [TODO: real email]
+    email: "lotustozboya@gmail.com",
   },
 
   address: {

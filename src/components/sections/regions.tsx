@@ -8,7 +8,7 @@ export function Regions() {
     <Section size="md" className="section-tint-recess">
       <SectionHeader
         eyebrow="Hizmet Bölgeleri"
-        title="Trakya ve Marmara bölgesinde sekiz üretim noktası"
+        title="Trakya ve Marmara bölgesinde 8 bölgeye hizmet"
         description="Çorlu OSB merkezli tesisimizden Çerkezköy, Velimeşe, Ergene, Kapaklı, Tekirdağ, Marmara Ereğlisi ve Silivri’ye düzenli sefer ve teslim hizmeti."
       />
 
