@@ -33,14 +33,23 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   // Rich (locally-optimised) cities get a keyword-tuned title pattern.
   if (city.rich) {
     return {
-      title: `${city.name} Toz Boya · Elektrostatik Toz Boya & Metal Boyama`,
-      description: `${city.name}’da elektrostatik toz boya, fırın boya ve metal boyama. ${city.name} OSB içinde 11+ yıllık tesis, ISO 12944 sertifikalı, 48 saatte acil teslim. Ücretsiz teklif için arayın.`,
+      title: `${city.name} Toz Boya · Elektrostatik, Fırın, Jant & Alüminyum Boyama`,
+      description: `${city.name}’da elektrostatik toz boya, fırın boya, jant boyama, alüminyum ve paslanmaz boyama. ${city.name} OSB içinde 11+ yıllık tesis, ISO 12944 sertifikalı, 48 saatte acil teslim. Ücretsiz teklif için arayın.`,
       keywords: [
         city.rich.primaryKeyword,
         ...city.rich.secondaryKeywords,
+        `${city.name} toz boya`,
+        `${city.name} elektrostatik boya`,
+        `${city.name} fırın boya`,
+        `${city.name} jant boyama`,
+        `${city.name} alüminyum boyama`,
+        `${city.name} paslanmaz boyama`,
         "toz boya",
         "metal boyama",
         "fırın boya",
+        "jant boyama",
+        "alüminyum boyama",
+        "paslanmaz çelik boyama",
       ],
       alternates: { canonical: `/bolgeler/${slug}` },
       openGraph: {
@@ -53,8 +62,19 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
   }
 
   return {
-    title: `${city.name} Elektrostatik Toz Boya & Endüstriyel Kaplama`,
-    description: `${city.name} bölgesindeki üreticilere elektrostatik toz boya, fırın boya ve vernik kaplama hizmeti. Bölge içi nakliye desteği ve hızlı teslim.`,
+    title: `${city.name} Toz Boya · Elektrostatik, Fırın, Jant & Alüminyum Boyama`,
+    description: `${city.name} bölgesinde elektrostatik toz boya, fırın boya, jant boyama, alüminyum ve paslanmaz boyama hizmeti. Bölge içi nakliye desteği ve hızlı teslim.`,
+    keywords: [
+      `${city.name} toz boya`,
+      `${city.name} elektrostatik boya`,
+      `${city.name} fırın boya`,
+      `${city.name} jant boyama`,
+      `${city.name} alüminyum boyama`,
+      `${city.name} paslanmaz boyama`,
+      "toz boya",
+      "fırın boya",
+      "metal boyama",
+    ],
     alternates: { canonical: `/bolgeler/${slug}` },
   };
 }
@@ -100,6 +120,9 @@ export default async function CityPage({ params }: Params) {
                 "Fırın Boya",
                 "Vernik Kaplama",
                 "Yüzey Ön İşleme",
+                "Jant Boyama",
+                "Alüminyum Boyama",
+                "Paslanmaz Çelik Boyama",
                 "Metal Boyama",
                 "Endüstriyel Kaplama",
               ],

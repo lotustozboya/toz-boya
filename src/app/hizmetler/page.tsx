@@ -8,9 +8,9 @@ import { JsonLd, breadcrumbSchema } from "@/components/seo/json-ld";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Hizmetler · Elektrostatik Toz Boya & Endüstriyel Kaplama",
+  title: "Hizmetler · Elektrostatik Toz Boya, Fırın Boya, Jant & Alüminyum Boyama",
   description:
-    "Çorlu, Çerkezköy ve Tekirdağ bölgesindeki üreticilere elektrostatik toz boya, fırın boya, vernik kaplama ve yüzey ön işleme çözümleri.",
+    "Çorlu, Çerkezköy ve Tekirdağ bölgesinde elektrostatik toz boya, fırın boya, vernik kaplama, jant boyama, alüminyum ve paslanmaz çelik boyama ile yüzey ön işleme çözümleri.",
   alternates: { canonical: "/hizmetler" },
 };
 
@@ -20,8 +20,8 @@ export default function ServicesPage() {
       <Breadcrumbs items={[{ href: "/hizmetler", label: "Hizmetler" }]} />
       <PageHero
         eyebrow="Hizmetler"
-        title="Endüstriyel kaplamada tek çatı altında dört hizmet"
-        description="Yüzey hazırlığından polimerizasyona, vernik kaplamadan kalite kontrolüne kadar tüm aşamaları tek bir tesiste tamamlıyoruz."
+        title="Endüstriyel kaplamada tek çatı altında yedi hizmet"
+        description="Elektrostatik toz boya, fırın boya, vernik kaplama, jant boyama, alüminyum ve paslanmaz çelik boyama ile yüzey ön işleme — yüzey hazırlığından kalite kontrolüne kadar tüm aşamaları tek bir tesiste tamamlıyoruz."
       />
       <ServicesGrid />
       <Process />

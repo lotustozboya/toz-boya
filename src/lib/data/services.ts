@@ -1,5 +1,5 @@
 import type { LucideIcon } from "lucide-react";
-import { Flame, SprayCan, Layers, Droplets } from "lucide-react";
+import { Flame, SprayCan, Layers, Droplets, CircleDot, Hammer, Shield } from "lucide-react";
 
 export interface Service {
   slug: string;
@@ -267,6 +267,212 @@ export const services: Service[] = [
       {
         q: "Yüzey ön işlem neden önemlidir?",
         a: "Yağ ve oksit kalıntısı bulunan bir yüzeye uygulanan boya kısa sürede dökülür. Doğru ön işlem, kaplama ömrünü doğrudan belirler.",
+      },
+    ],
+  },
+  {
+    slug: "jant-boyama",
+    title: "Jant Boyama — Elektrostatik Toz Boya",
+    shortTitle: "Jant Boyama",
+    icon: CircleDot,
+    excerpt:
+      "Otomobil ve hafif ticari araç jantları için elektrostatik toz boya ile uzun ömürlü, fabrika kalitesinde kaplama.",
+    description:
+      "Alüminyum alaşımlı ve çelik jantları sökülmüş şekilde tesisimize teslim alıp kumlama, ön işlem ve elektrostatik toz boya hattımızdan geçiriyoruz. Bordür darbesi, kimyasal lekelenme ve fren tozu nedeniyle yıpranmış jantlar; orijinal renge ya da seçtiğiniz RAL koduna geri döner. Mat siyah, antrasit, parlak gümüş ve özel renkler stoğumuzda bulunur.",
+    features: [
+      "14\"–22\" arası tüm jant ölçüleri",
+      "Alüminyum alaşım ve çelik jant",
+      "Kumlama ile mevcut boya/oksit kaldırma",
+      "Mat, parlak, metalik ve dokulu seçenekler",
+      "RAL kataloğu ve Jotun renk eşleştirme",
+    ],
+    applications: [
+      "Otomobil jantları (alaşım ve çelik)",
+      "Hafif ticari araç jantları",
+      "Motosiklet jantı ve rotor",
+      "Klasik / restorasyon araç jantları",
+      "Filo araç jantları (toplu)",
+    ],
+    process: [
+      {
+        title: "Lastik Sökümü ve Kumlama",
+        detail:
+          "Janttan lastik ve balans ağırlıkları sökülür, kumlama hattında eski boya ve oksit tamamen kaldırılır.",
+      },
+      {
+        title: "Yüzey Ön İşleme",
+        detail:
+          "Yağ alma, durulama ve fosfatlama ile alüminyum yüzey boyaya hazırlanır.",
+      },
+      {
+        title: "Toz Boya Uygulaması",
+        detail:
+          "Elektrostatik tabanca ile homojen tek kat veya astar+renk+vernik üçlü sistem.",
+      },
+      {
+        title: "Polimerizasyon",
+        detail: "180–200°C fırında pişirme; sertleşme ve yüksek aderans.",
+      },
+      {
+        title: "Kalite Kontrol",
+        detail:
+          "Film kalınlığı, renk tonu ve yüzey kusur kontrolünden sonra paketleme.",
+      },
+    ],
+    benefits: [
+      "Fren tozuna ve yol kimyasallarına dayanım",
+      "UV ve hava koşullarında renk solmaz",
+      "Çizilme ve bordür darbesine dirençli yüzey",
+      "Sıvı boyaya kıyasla 3–5 kat daha uzun ömür",
+    ],
+    faq: [
+      {
+        q: "Jant boyama ne kadar sürer?",
+        a: "Tek set (4 jant) standart koşullarda 2–3 iş gününde teslim edilir. Acil işler için 24 saat seçeneği vardır.",
+      },
+      {
+        q: "Hangi renkler mevcut?",
+        a: "RAL kataloğundaki tüm renklerin yanı sıra mat siyah, antrasit, parlak gümüş, bronz, altın gibi özel jant renklerini stokluyoruz.",
+      },
+      {
+        q: "Jantın orijinal değeri/balansı bozulur mu?",
+        a: "Kumlama düşük basınçta yapılır, yapısal bütünlük korunur. Boyama sonrası TIR balans makinemizde balans kontrolü yaparız.",
+      },
+    ],
+  },
+  {
+    slug: "aluminyum-boyama",
+    title: "Alüminyum Boyama — Toz Boya ve Fırın Boya",
+    shortTitle: "Alüminyum Boyama",
+    icon: Hammer,
+    excerpt:
+      "Alüminyum profil, doğrama, panel ve döküm parçalar için aderansı yüksek, korozyon dirençli elektrostatik kaplama.",
+    description:
+      "Alüminyum yüzeylerin boyaya tutunması özel bir ön işlem gerektirir; bu nedenle pasivasyon adımımızı kromsuz bir reçete ile uyguluyoruz. Mimari alüminyum doğrama, vitrin profili, panjur, alüminyum sandviç panel, döküm parça ve enjeksiyon kalıplarına elektrostatik toz boya veya fırın boya seçenekleriyle hizmet veriyoruz.",
+    features: [
+      "Kromsuz pasivasyon ile yüksek aderans",
+      "Mimari standartlara uygun renkler",
+      "QUALICOAT seviyesinde yüzey performansı",
+      "RAL, Jotun ve özel renk eşleştirme",
+      "Mat, parlak, dokulu yüzeyler",
+    ],
+    applications: [
+      "Alüminyum doğrama ve kapı-pencere profili",
+      "Vitrin ve cephe profili",
+      "Alüminyum panjur ve kepenk",
+      "Sandviç panel ve kompozit kaplama",
+      "Alüminyum döküm ve enjeksiyon parça",
+    ],
+    process: [
+      {
+        title: "Yağ Alma",
+        detail:
+          "Alüminyum yüzeyindeki haddeleme yağları ve kalıntılar alkali yıkamayla giderilir.",
+      },
+      {
+        title: "Pasivasyon",
+        detail:
+          "Kromsuz pasivasyon ile boyanın tutunacağı koruyucu film oluşturulur.",
+      },
+      {
+        title: "Toz Boya Uygulama",
+        detail:
+          "Elektrostatik tabanca ile mimari kaliteye uygun film kalınlığı.",
+      },
+      {
+        title: "Polimerizasyon",
+        detail: "180–200°C kontrollü fırın eğrisi ile pişirme.",
+      },
+      {
+        title: "Kalite Kontrolü",
+        detail: "Aderans, film kalınlığı ve parlaklık ölçümü.",
+      },
+    ],
+    benefits: [
+      "Mimari uygulamalarda 10+ yıl renk garantisi",
+      "Korozyon ve UV dayanımı yüksek",
+      "Çizilme ve kimyasallara dirençli",
+      "Kromsuz reçete — çevre dostu",
+    ],
+    faq: [
+      {
+        q: "Alüminyumda neden özel bir ön işlem gerekir?",
+        a: "Alüminyum yüzeyinde doğal oluşan oksit tabakası boyanın tutunmasını zorlaştırır. Pasivasyon bu yüzeyi hem aderans hem korozyon için optimize eder.",
+      },
+      {
+        q: "Mimari projelerde QUALICOAT uyumu var mı?",
+        a: "Reçete ve fırın parametrelerimiz QUALICOAT seviyesinde yüzey performansı verir. İstenirse aderans ve tuz püskürtme test raporu sunarız.",
+      },
+      {
+        q: "Hangi alüminyum tipleri kaplanır?",
+        a: "6063, 6061 mimari profiller, alaşımlı döküm parçalar ve hadde alüminyum saclar dahil tüm yaygın alaşımlar kaplanır.",
+      },
+    ],
+  },
+  {
+    slug: "paslanmaz-boyama",
+    title: "Paslanmaz Çelik Boyama",
+    shortTitle: "Paslanmaz Boyama",
+    icon: Shield,
+    excerpt:
+      "304 ve 316 paslanmaz çelik yüzeylerde aderans sorununu çözen özel astar + toz boya kombinasyonu.",
+    description:
+      "Paslanmaz çelik düşük yüzey enerjisi nedeniyle boya tutmakta zorlanır; bu yüzden mimari, mutfak ekipmanı ve dekoratif paslanmaz parçaları için özel epoksi astar + elektrostatik toz boya kombinasyonu uyguluyoruz. 304 ve 316 kalite tüm yüzeylere uygulanabilir; renk seçimi RAL kataloğunun tamamından yapılabilir.",
+    features: [
+      "Özel epoksi astar ile aderans çözümü",
+      "304 ve 316 paslanmaz uyumu",
+      "RAL kataloğu tam renk desteği",
+      "Mat, parlak ve dokulu seçenekler",
+      "Mimari ve gıda hijyenik yüzey opsiyonu",
+    ],
+    applications: [
+      "Paslanmaz çelik korkuluk ve merdiven",
+      "Endüstriyel mutfak ekipmanı",
+      "Dekoratif paslanmaz cephe paneli",
+      "Asansör kabin paneli (paslanmaz)",
+      "Reklam tabela ve mağaza ekipmanı",
+    ],
+    process: [
+      {
+        title: "Yüzey Aşındırma",
+        detail:
+          "Aderans için yüzey kontrollü kumlama veya kimyasal aşındırma ile pürüzlendirilir.",
+      },
+      {
+        title: "Yağ Alma ve Aktivasyon",
+        detail: "Alkali yıkama ve aktivasyon reçetesi uygulanır.",
+      },
+      {
+        title: "Epoksi Astar",
+        detail: "Paslanmaz için özel epoksi astar tabakası fırınlanır.",
+      },
+      {
+        title: "Toz Boya Uygulama",
+        detail: "Astar üzerine elektrostatik toz boya katmanı.",
+      },
+      {
+        title: "Polimerizasyon",
+        detail: "180–200°C pişirme ve sertleşme.",
+      },
+    ],
+    benefits: [
+      "Paslanmazda yıllarca dayanan aderans",
+      "Korozyon ve kimyasal dirençte artış",
+      "RAL ile renkli paslanmaz görünüm imkânı",
+      "Dekoratif ve hijyenik yüzey seçeneği",
+    ],
+    faq: [
+      {
+        q: "Paslanmaz çelik neden zor boyanır?",
+        a: "304 ve 316 paslanmaz, düşük yüzey enerjisi ve oksit tabakası nedeniyle boya tutunmasını zorlaştırır. Özel astar + yüzey aşındırma bu sorunu çözer.",
+      },
+      {
+        q: "Boya zamanla soyulur mu?",
+        a: "Doğru astar + ön işlem ile boya yüzeye kimyasal olarak bağlanır; iç mekânda uzun yıllar, dış mekânda 5–10 yıl performans verir.",
+      },
+      {
+        q: "Hangi paslanmaz tipleri kaplanır?",
+        a: "304 ve 316 kalite tüm mimari paslanmaz çelik yüzeyler kaplanabilir. Galvaniz ve elektrolit kaplama yüzeyler için ayrı reçete kullanırız.",
       },
     ],
   },

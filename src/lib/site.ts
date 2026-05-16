@@ -3,11 +3,11 @@
 
 export const site = {
   name: "Lotus Elektrostatik Boya",
-  legalName: "Lotus Elektrostatik Toz Boya San. Tic. Ltd. Şti.",
+  legalName: "Lotus Boyama Taşımacılık İnşaat Taahhüt San. ve Tic. Ltd. Şti.",
   shortName: "Lotus Boya",
   tagline: "Endüstriyel Elektrostatik Toz Boya Çözümleri",
   description:
-    "Çorlu OSB merkezli tesisimizden Çerkezköy, Velimeşe, Ergene, Kapaklı, Tekirdağ, Marmara Ereğlisi ve Silivri’ye elektrostatik toz boya, fırın boya ve vernik kaplama hizmetleri. Kurumsal kalite, hızlı teslimat ve uzun ömürlü kaplama.",
+    "Çorlu OSB merkezli tesisimizden Çerkezköy, Velimeşe, Ergene, Kapaklı, Tekirdağ, Marmara Ereğlisi ve Silivri’ye elektrostatik toz boya, fırın boya, jant boyama, alüminyum ve paslanmaz boyama, vernik kaplama hizmetleri. Kurumsal kalite, hızlı teslimat ve uzun ömürlü kaplama.",
   url: "https://lotuselektrostatik.com", // [TODO: domain]
   locale: "tr_TR",
   founded: "2014",
