@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, MapPin, Phone, Clock, Instagram, Linkedin } from "lucide-react";
+import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import { Container } from "@/components/ui/container";
 import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/brand/logo";
@@ -52,26 +52,6 @@ export function Footer() {
             <p className="text-sm text-[var(--color-text-muted)] leading-relaxed max-w-sm">
               {site.description}
             </p>
-            <div className="flex items-center gap-px mt-3">
-              <a
-                href={site.social.instagram}
-                target="_blank"
-                rel="noopener"
-                aria-label="Instagram"
-                className="grid h-10 w-10 place-items-center border border-[var(--color-line)] text-[var(--color-text-muted)] hover:text-[var(--color-accent)] hover:border-[var(--color-accent)] transition-colors"
-              >
-                <Instagram className="h-4 w-4" strokeWidth={1.5} />
-              </a>
-              <a
-                href={site.social.linkedin}
-                target="_blank"
-                rel="noopener"
-                aria-label="LinkedIn"
-                className="grid h-10 w-10 place-items-center border border-[var(--color-line)] text-[var(--color-text-muted)] hover:text-[var(--color-accent)] hover:border-[var(--color-accent)] transition-colors"
-              >
-                <Linkedin className="h-4 w-4" strokeWidth={1.5} />
-              </a>
-            </div>
           </div>
 
           <div className="lg:col-span-2">

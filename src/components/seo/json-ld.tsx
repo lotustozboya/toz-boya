@@ -61,7 +61,6 @@ export function localBusinessSchema() {
         closes: "14:00",
       },
     ],
-    sameAs: [site.social.instagram, site.social.linkedin],
   };
 }
 
@@ -73,7 +72,6 @@ export function organizationSchema() {
     name: site.legalName,
     url: site.url,
     logo: `${site.url}/logo.png`,
-    sameAs: [site.social.instagram, site.social.linkedin],
     foundingDate: site.founded,
   };
 }

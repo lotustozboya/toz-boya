@@ -41,11 +41,6 @@ export const site = {
     sunday: "Kapalı",
   },
 
-  social: {
-    instagram: "https://instagram.com/", // [TODO]
-    linkedin: "https://www.linkedin.com/", // [TODO]
-  },
-
   stats: {
     yearsActive: 11,
     projectsDelivered: 1200,
