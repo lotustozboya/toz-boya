@@ -4,14 +4,12 @@ import * as React from "react";
 import { Send, MessageCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { whatsappLink, telLink, site } from "@/lib/site";
-import { services } from "@/lib/data/services";
 
 interface FormState {
   name: string;
   company: string;
   phone: string;
   email: string;
-  service: string;
   qty: string;
   message: string;
 }
@@ -21,7 +19,6 @@ const initial: FormState = {
   company: "",
   phone: "",
   email: "",
-  service: services[0].slug,
   qty: "",
   message: "",
 };
@@ -38,7 +35,6 @@ export function QuoteForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const service = services.find((s) => s.slug === form.service)?.title ?? "";
     const text = [
       "Merhaba, web sitesi üzerinden teklif almak istiyorum.",
       "",
@@ -46,7 +42,6 @@ export function QuoteForm() {
       `Firma: ${form.company || "—"}`,
       `Telefon: ${form.phone}`,
       `E-posta: ${form.email || "—"}`,
-      `Hizmet: ${service}`,
       `Miktar / Ölçü: ${form.qty || "—"}`,
       "",
       `Mesaj: ${form.message || "—"}`,
@@ -159,22 +154,6 @@ export function QuoteForm() {
               className={inputCls}
               autoComplete="email"
             />
-          </Field>
-          <Field label="Hizmet *" htmlFor="service">
-            <select
-              id="service"
-              name="service"
-              required
-              value={form.service}
-              onChange={onChange}
-              className={inputCls}
-            >
-              {services.map((s) => (
-                <option key={s.slug} value={s.slug}>
-                  {s.shortTitle}
-                </option>
-              ))}
-            </select>
           </Field>
           <Field label="Miktar / Ölçü" htmlFor="qty">
             <input
